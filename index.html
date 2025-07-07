@@ -1,0 +1,44 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PhotoBOOTH</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>PhotoBOOTH</h1>
+      <div class="curtain left-curtain"></div>
+      <div class="curtain right-curtain"></div>
+      <button id="start-btn">Enter a Coin</button>
+
+      <div class="camera-section" id="camera-section">
+        <video id="video" autoplay></video>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="none">90s</button>
+          <button class="filter-btn" data-filter="sepia(0.6)">2000s</button>
+          <button class="filter-btn" data-filter="grayscale(1)">Noir</button>
+          <button class="filter-btn" data-filter="brightness(1.1) sepia(0.3)">Warm Glow</button>
+          <button class="filter-btn" data-filter="brightness(1.2) contrast(0.9) saturate(0.7)">Soft Fade</button>
+          <button class="filter-btn" data-filter="grayscale(1) contrast(1.2)">Classic B&W</button>
+        </div>
+
+        <button id="capture-btn" class="camera-icon-btn">📷</button>
+
+        <div id="photos"></div>
+
+        <div id="final-strip">
+          <canvas id="strip-canvas" width="200" height="600"></canvas>
+          <div id="strip-buttons">
+            <button id="reshoot-btn">Reshoot</button>
+            <button id="download-strip-btn">Download Strip</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
