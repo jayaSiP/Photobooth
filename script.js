@@ -124,7 +124,14 @@ function createPhotoStrip() {
 
     ctx.fillStyle = "#000";
     ctx.font = "12px Arial";
-    ctx.fillText("dvBooth • 7 July 2025", 30, 590);
+   const today = new Date();
+const formattedDate = today.toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric'
+});
+ctx.fillText(`jaya.booth • ${formattedDate}`, 30, 590);
+
 
     finalStrip.style.display = "block";
     toggleUIForFinalStrip(true);
